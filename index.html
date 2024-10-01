@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Résumé Hebdomadaire des Activités</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #2C3E50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            width: 90%;
+            margin: 20px auto;
+        }
+        h1 {
+            text-align: center;
+            color: #2C3E50;
+        }
+        .day-block {
+            background-color: white;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid #2C3E50;
+            position: relative;
+        }
+        .day-block h2 {
+            color: #34495E;
+            display: flex;
+            align-items: center;
+        }
+        .day-block h2 i {
+            margin-right: 10px;
+        }
+        .day-block p {
+            margin: 10px 0;
+        }
+        .day-block .toggle-content {
+            display: none;
+        }
+        .show-more {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: #34495E;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        .show-more:hover {
+            background-color: #2C3E50;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #34495E;
+            color: white;
+        }
+
+        /* Version mobile */
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+            header {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Résumé Hebdomadaire des Activités</h1>
+</header>
+
+<div class="container">
+    <!-- Mardi -->
+    <div class="day-block">
+        <h2><i class="fas fa-cogs"></i> Mardi 24</h2>
+        <button class="show-more" onclick="toggleContent(this)">Afficher</button>
+        <div class="toggle-content">
+            <p>Installation d'une nouvelle PV, mais aucune instruction d'utilisation reçue.</p>
+            <p>Remplissage des bacs et des camions-citernes pour raclage.</p>
+            <p>Défaillance de l'enregistreur Barton du métier 2 (mécanisme d'entraînement lent et fixation faible).</p>
+        </div>
+    </div>
+
+    <!-- Mercredi -->
+    <div class="day-block">
+        <h2><i class="fas fa-tools"></i> Mercredi 25</h2>
+        <button class="show-more" onclick="toggleContent(this)">Afficher</button>
+        <div class="toggle-content">
+            <p>Test des "CALL POINT" et du "Fail Last" par les instrumentistes.</p>
+        </div>
+    </div>
+
+    <!-- Jeudi -->
+    <div class="day-block">
+        <h2><i class="fas fa-wrench"></i> Jeudi 26</h2>
+        <button class="show-more" onclick="toggleContent(this)">Afficher</button>
+        <div class="toggle-content">
+            <p>Investigations sur le moteur de la pompe A (défaut d'isolement), remplacement par le moteur de la pompe B.</p>
+            <p>OT préventif par les instrumentistes sur les détecteurs de fuite et les alarmes visuelles et sonores.</p>
+            <p>Retouche peinture par THEMIS après les travaux d'arrêt.</p>
+            <p>Raclage en cours de la ligne 4".</p>
+            <p>Visite du site pour appel d'offres concernant le renforcement de l'éclairage.</p>
+            <p>Exercice de sécurité simulant la chute d'un électricien du groupe électrogène et départ de feu.</p>
+        </div>
+    </div>
+
+    <!-- Vendredi -->
+    <div class="day-block">
+        <h2><i class="fas fa-exclamation-circle"></i> Vendredi 27</h2>
+        <button class="show-more" onclick="toggleContent(this)">Afficher</button>
+        <div class="toggle-content">
+            <p>Arrêt de la TG 11 pour recharge de leurs automates.</p>
+            <p>Remontée de pression et déversements d'huile au skid d'expédition de condensat.</p>
+            <p>Remplacement du moteur de la pompe A.</p>
+        </div>
+    </div>
+
+    <!-- Samedi -->
+    <div class="day-block">
+        <h2><i class="fas fa-paint-roller"></i> Samedi 28</h2>
+        <button class="show-more" onclick="toggleContent(this)">Afficher</button>
+        <div class="toggle-content">
+            <p>Mise à disposition et retournement du clapet 2" vcf-6278-B.</p>
+            <p>Retouche peinture par ERI suite aux travaux d'arrêt.</p>
+            <p>Empotage et dépotage de condensat d'Azito 123 et Azito 4.</p>
+        </div>
+    </div>
+
+    <!-- Dimanche -->
+    <div class="day-block">
+        <h2><i class="fas fa-shipping-fast"></i> Dimanche 29</h2>
+        <button class="show-more" onclick="toggleContent(this)">Afficher</button>
+        <div class="toggle-content">
+            <p>Retournement du clapet 2" vcf-6278-B, transfert de HC liquide vers la SIR.</p>
+        </div>
+    </div>
+
+    <!-- Lundi -->
+    <div class="day-block">
+        <h2><i class="fas fa-gas-pump"></i> Lundi 30</h2>
+        <button class="show-more" onclick="toggleContent(this)">Afficher</button>
+        <div class="toggle-content">
+            <p>Analyse du gaz d'Addah par les instrumentistes.</p>
+            <p>Relancement du raclage 4" huile.</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>© 2024 Votre Société</p>
+</footer>
+
+<script>
+    function toggleContent(button) {
+        const content = button.nextElementSibling;
+        if (content.style.display === "block") {
+            content.style.display = "none";
+            button.textContent = "Afficher";
+        } else {
+            content.style.display = "block";
+            button.textContent = "Masquer";
+        }
+    }
+</script>
+
+</body>
+</html>
