@@ -26,7 +26,7 @@
             text-align: center;
             color: #2C3E50;
         }
-        .day-block {
+        .car-block {
             background-color: white;
             padding: 15px;
             margin-bottom: 20px;
@@ -34,34 +34,43 @@
             border-left: 5px solid #2C3E50;
             position: relative;
         }
-        .day-block h2 {
+        .car-block h2 {
             color: #34495E;
             display: flex;
             align-items: center;
         }
-        .day-block h2 i {
-            margin-right: 10px;
-        }
-        .day-block p {
-            margin: 10px 0;
-        }
-        .day-block .toggle-content {
+        .car-block .days-content {
             display: none;
+            margin-top: 15px;
         }
-        .show-more {
-            position: absolute;
-            top: 15px;
-            right: 15px;
+        .show-days {
             background-color: #34495E;
             color: white;
             border: none;
-            padding: 5px 10px;
+            padding: 10px;
             cursor: pointer;
             border-radius: 3px;
         }
-        .show-more:hover {
+        .show-days:hover {
             background-color: #2C3E50;
         }
+        .day-block {
+            background-color: #ecf0f1;
+            margin-top: 10px;
+            padding: 10px;
+        }
+        .day-block h3 {
+            margin: 0;
+        }
+        .day-block textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            min-height: 50px;
+            resize: none; /* Empêche le redimensionnement manuel */
+            overflow-y: hidden; /* Cache la barre de défilement */
+        }
+
         footer {
             text-align: center;
             padding: 20px;
@@ -87,75 +96,118 @@
 </header>
 
 <div class="container">
-    <!-- Lundi 7 octobre -->
-    <div class="day-block">
-        <h2><i class="fas fa-car"></i> Lundi 7 octobre</h2>
-        <button class="show-more" onclick="toggleContent(this)">Afficher</button>
-        <div class="toggle-content">
-            <p>Problème de freinage signalé sur le véhicule #1.</p>
-            <p>Pneu crevé pour le véhicule #3 sur la route de Yopougon.</p>
-            <p>Le moteur du véhicule #2 chauffe anormalement.</p>
+
+    <!-- Voiture 1 : Starlet Grise -->
+    <div class="car-block" id="car1">
+        <h2><i class="fas fa-car"></i> Voiture 1 : Starlet Grise</h2>
+        <button class="show-days" onclick="toggleDays('days-car1')">Afficher les jours</button>
+        <div class="days-content" id="days-car1">
+            <!-- Affichage des jours de la semaine -->
+            <div class="day-block">
+                <h3>Lundi</h3>
+                <textarea placeholder="Entrez une information pour lundi (Starlet Grise)..." oninput="autoResize(this)"></textarea>
+            </div>
+            <div class="day-block">
+                <h3>Mardi</h3>
+                <textarea placeholder="Entrez une information pour mardi (Starlet Grise)..." oninput="autoResize(this)"></textarea>
+            </div>
+            <div class="day-block">
+                <h3>Mercredi</h3>
+                <textarea placeholder="Entrez une information pour mercredi (Starlet Grise)..." oninput="autoResize(this)"></textarea>
+            </div>
+            <div class="day-block">
+                <h3>Jeudi</h3>
+                <textarea placeholder="Entrez une information pour jeudi (Starlet Grise)..." oninput="autoResize(this)"></textarea>
+            </div>
+            <div class="day-block">
+                <h3>Vendredi</h3>
+                <textarea placeholder="Entrez une information pour vendredi (Starlet Grise)..." oninput="autoResize(this)"></textarea>
+            </div>
+            <div class="day-block">
+                <h3>Samedi</h3>
+                <textarea placeholder="Entrez une information pour samedi (Starlet Grise)..." oninput="autoResize(this)"></textarea>
+            </div>
+            <div class="day-block">
+                <h3>Dimanche</h3>
+                <textarea placeholder="Entrez une information pour dimanche (Starlet Grise)..." oninput="autoResize(this)"></textarea>
+            </div>
         </div>
     </div>
 
-    <!-- Mardi 8 octobre -->
-    <div class="day-block">
-        <h2><i class="fas fa-car"></i> Mardi 8 octobre</h2>
-        <button class="show-more" onclick="toggleContent(this)">Afficher</button>
-        <div class="toggle-content">
-            <p>Problème de batterie pour le véhicule #4.</p>
-            <p>Le véhicule #2 a besoin d'une vidange urgente.</p>
+    <!-- Voiture 2 : Starlet Blanche -->
+    <div class="car-block" id="car2">
+        <h2><i class="fas fa-car"></i> Voiture 2 : Starlet Blanche</h2>
+        <button class="show-days" onclick="toggleDays('days-car2')">Afficher les jours</button>
+        <div class="days-content" id="days-car2">
+            <!-- Affichage des jours de la semaine -->
+            <div class="day-block">
+                <h3>Lundi</h3>
+                <textarea placeholder="Entrez une information pour lundi (Starlet Blanche)..." oninput="autoResize(this)"></textarea>
+            </div>
+            <div class="day-block">
+                <h3>Mardi</h3>
+                <textarea placeholder="Entrez une information pour mardi (Starlet Blanche)..." oninput="autoResize(this)"></textarea>
+            </div>
+            <div class="day-block">
+                <h3>Mercredi</h3>
+                <textarea placeholder="Entrez une information pour mercredi (Starlet Blanche)..." oninput="autoResize(this)"></textarea>
+            </div>
+            <div class="day-block">
+                <h3>Jeudi</h3>
+                <textarea placeholder="Entrez une information pour jeudi (Starlet Blanche)..." oninput="autoResize(this)"></textarea>
+            </div>
+            <div class="day-block">
+                <h3>Vendredi</h3>
+                <textarea placeholder="Entrez une information pour vendredi (Starlet Blanche)..." oninput="autoResize(this)"></textarea>
+            </div>
+            <div class="day-block">
+                <h3>Samedi</h3>
+                <textarea placeholder="Entrez une information pour samedi (Starlet Blanche)..." oninput="autoResize(this)"></textarea>
+            </div>
+            <div class="day-block">
+                <h3>Dimanche</h3>
+                <textarea placeholder="Entrez une information pour dimanche (Starlet Blanche)..." oninput="autoResize(this)"></textarea>
+            </div>
         </div>
     </div>
 
-    <!-- Mercredi 9 octobre -->
-    <div class="day-block">
-        <h2><i class="fas fa-car"></i> Mercredi 9 octobre</h2>
-        <button class="show-more" onclick="toggleContent(this)">Afficher</button>
-        <div class="toggle-content">
-            <p>Les phares du véhicule #5 ne fonctionnent plus.</p>
-            <p>Remplacement du pare-brise fissuré sur le véhicule #3.</p>
+    <!-- Voiture 3 : Dzire -->
+    <div class="car-block" id="car3">
+        <h2><i class="fas fa-car"></i> Voiture 3 : Dzire</h2>
+        <button class="show-days" onclick="toggleDays('days-car3')">Afficher les jours</button>
+        <div class="days-content" id="days-car3">
+            <!-- Affichage des jours de la semaine -->
+            <div class="day-block">
+                <h3>Lundi</h3>
+                <textarea placeholder="Entrez une information pour lundi (Dzire)..." oninput="autoResize(this)"></textarea>
+            </div>
+            <div class="day-block">
+                <h3>Mardi</h3>
+                <textarea placeholder="Entrez une information pour mardi (Dzire)..." oninput="autoResize(this)"></textarea>
+            </div>
+            <div class="day-block">
+                <h3>Mercredi</h3>
+                <textarea placeholder="Entrez une information pour mercredi (Dzire)..." oninput="autoResize(this)"></textarea>
+            </div>
+            <div class="day-block">
+                <h3>Jeudi</h3>
+                <textarea placeholder="Entrez une information pour jeudi (Dzire)..." oninput="autoResize(this)"></textarea>
+            </div>
+            <div class="day-block">
+                <h3>Vendredi</h3>
+                <textarea placeholder="Entrez une information pour vendredi (Dzire)..." oninput="autoResize(this)"></textarea>
+            </div>
+            <div class="day-block">
+                <h3>Samedi</h3>
+                <textarea placeholder="Entrez une information pour samedi (Dzire)..." oninput="autoResize(this)"></textarea>
+            </div>
+            <div class="day-block">
+                <h3>Dimanche</h3>
+                <textarea placeholder="Entrez une information pour dimanche (Dzire)..." oninput="autoResize(this)"></textarea>
+            </div>
         </div>
     </div>
 
-    <!-- Jeudi 10 octobre -->
-    <div class="day-block">
-        <h2><i class="fas fa-car"></i> Jeudi 10 octobre</h2>
-        <button class="show-more" onclick="toggleContent(this)">Afficher</button>
-        <div class="toggle-content">
-            <p>Le moteur du véhicule #1 montre des signes de faiblesse.</p>
-            <p>Réparation du système de climatisation sur le véhicule #2.</p>
-        </div>
-    </div>
-
-    <!-- Vendredi 11 octobre -->
-    <div class="day-block">
-        <h2><i class="fas fa-car"></i> Vendredi 11 octobre</h2>
-        <button class="show-more" onclick="toggleContent(this)">Afficher</button>
-        <div class="toggle-content">
-            <p>Problème de transmission détecté sur le véhicule #4.</p>
-            <p>Le véhicule #3 a besoin de nouveaux amortisseurs.</p>
-        </div>
-    </div>
-
-    <!-- Samedi 12 octobre -->
-    <div class="day-block">
-        <h2><i class="fas fa-car"></i> Samedi 12 octobre</h2>
-        <button class="show-more" onclick="toggleContent(this)">Afficher</button>
-        <div class="toggle-content">
-            <p>Vérification complète du véhicule #1 suite à une inspection.</p>
-            <p>Problème d'embrayage sur le véhicule #2.</p>
-        </div>
-    </div>
-
-    <!-- Dimanche 13 octobre -->
-    <div class="day-block">
-        <h2><i class="fas fa-car"></i> Dimanche 13 octobre</h2>
-        <button class="show-more" onclick="toggleContent(this)">Afficher</button>
-        <div class="toggle-content">
-            <p>Le véhicule #5 est hors service pour maintenance.</p>
-        </div>
-    </div>
 </div>
 
 <footer>
@@ -163,15 +215,20 @@
 </footer>
 
 <script>
-    function toggleContent(button) {
-        const content = button.nextElementSibling;
-        if (content.style.display === "block") {
-            content.style.display = "none";
-            button.textContent = "Afficher";
+    // Fonction pour afficher ou masquer les jours d'une voiture
+    function toggleDays(daysId) {
+        const daysContent = document.getElementById(daysId);
+        if (daysContent.style.display === "block") {
+            daysContent.style.display = "none";
         } else {
-            content.style.display = "block";
-            button.textContent = "Masquer";
+            daysContent.style.display = "block";
         }
+    }
+
+    // Fonction pour redimensionner automatiquement les textarea
+    function autoResize(textarea) {
+        textarea.style.height = 'auto'; // Réinitialiser la hauteur pour calculer la nouvelle taille
+        textarea.style.height = textarea.scrollHeight + 'px'; // Ajuster la hauteur en fonction du contenu
     }
 </script>
 
